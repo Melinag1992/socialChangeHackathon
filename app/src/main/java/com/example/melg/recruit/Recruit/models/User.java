@@ -1,4 +1,4 @@
-package com.example.melg.recruit.Recruit.discover.models;
+package com.example.melg.recruit.Recruit.models;
 
 import java.util.List;
 
