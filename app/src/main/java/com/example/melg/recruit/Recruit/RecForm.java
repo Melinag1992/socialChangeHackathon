@@ -11,7 +11,7 @@ public class RecForm extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.form_rec);
+        //setContentView(R.layout.form_rec);
 
 
     }
