@@ -1,4 +1,4 @@
-package com.example.melg.recruit.Recruit;
+package com.example.melg.recruit.Recruit.discover.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
