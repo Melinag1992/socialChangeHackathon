@@ -27,7 +27,6 @@ public class RecForm extends AppCompatActivity {
         ButterKnife.bind(this);
         getSupportActionBar().setTitle("Developer Request");
 
-
     }
 
     @OnClick(R.id.btnFind)
@@ -39,5 +38,6 @@ public class RecForm extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "You Are About to exit the app", Toast.LENGTH_LONG).show();
+
     }
 }
