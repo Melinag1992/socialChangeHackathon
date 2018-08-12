@@ -3,7 +3,6 @@ package com.example.melg.recruit.Recruit;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-
 import com.example.melg.recruit.R;
 
 public class RecForm extends AppCompatActivity {

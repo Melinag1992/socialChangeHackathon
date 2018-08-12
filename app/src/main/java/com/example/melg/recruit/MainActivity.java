@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.melg.recruit.Recruit.discover.view.DiscoverActivity;
+import com.example.melg.recruit.users.ProfileActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.button)
     public void onViewClicked() {
 
-        Intent view = new Intent(this, DiscoverActivity.class);
+        Intent view = new Intent(this, ProfileActivity.class);
         startActivity(view);
     }
 }

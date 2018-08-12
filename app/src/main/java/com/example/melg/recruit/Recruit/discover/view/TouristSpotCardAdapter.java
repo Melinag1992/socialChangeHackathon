@@ -59,7 +59,6 @@ public class TouristSpotCardAdapter extends ArrayAdapter<GitProjects> {
         }
         else{
 
-
             Glide.with(getContext())
                     .load(R.raw.gif)
                     .into(holder.projectRecoring);
