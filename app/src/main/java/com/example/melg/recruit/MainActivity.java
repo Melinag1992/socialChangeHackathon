@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 //            //User profile
 //            view = new Intent(this, DiscoverActivity.class);
 //        }
-        view = new Intent(this, ProfileActivity.class);
+        view = new Intent(this, DiscoverActivity.class);
         startActivity(view);
         finish();
 
