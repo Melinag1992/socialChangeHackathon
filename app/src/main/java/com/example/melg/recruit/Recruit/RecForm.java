@@ -16,7 +16,5 @@ public class RecForm extends AppCompatActivity {
         getSupportActionBar().setTitle("Developer Request");
 
 
-
-
     }
 }
