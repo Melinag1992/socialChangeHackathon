@@ -9,10 +9,13 @@ public class GitProjects {
     private String project_keywords;
     private String project_git;
 
-    public GitProjects( String project_git, String projectUrl ,String project_title) {
+    public GitProjects( String project_git, String projectUrl ,String project_title, String project_des , String language, String project_keywords) {
         this.project_title = project_title;
         this.projectUrl = projectUrl;
         this.project_git = project_git;
+        this.project_des = project_des;
+        this.project_keywords = project_keywords;
+        this.language = language;
     }
 
     public String getProject_title() {

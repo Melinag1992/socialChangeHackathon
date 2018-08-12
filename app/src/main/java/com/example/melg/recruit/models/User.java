@@ -3,8 +3,8 @@ package com.example.melg.recruit.models;
 import java.util.List;
 
 public class User extends Person{
-    private String github;
-    private String jobTitle;
+    private String  git;
+    private String role;
     private String resumeLocation;
     private List<String> keywords;
     private List<GitProjects> projects;
@@ -13,10 +13,10 @@ public class User extends Person{
 
 
 
-    public User(String firstName, String lastName, String email, String github, String jobTitle, String resumeLocation, List<String> keywords, List<GitProjects> projects, String language, boolean matched) {
+    public User(String firstName, String lastName, String email, String git, String role, String resumeLocation, List<String> keywords, List<GitProjects> projects, String language, boolean matched) {
         super(firstName, lastName, email);
-        this.github = github;
-        this.jobTitle = jobTitle;
+        this.git = git;
+        this.role = role;
         this.resumeLocation = resumeLocation;
         this.keywords = keywords;
         this.projects = projects;
@@ -40,20 +40,20 @@ public class User extends Person{
     public void setMatched(boolean matched) {
         this.matched = matched;
     }
-    public String getGithub() {
-        return github;
+    public String getGit() {
+        return git;
     }
 
-    public void setGithub(String github) {
-        this.github = github;
+    public void setGit(String git) {
+        this.git = git;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
+    public String getRole() {
+        return role;
     }
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getResumeLocation() {

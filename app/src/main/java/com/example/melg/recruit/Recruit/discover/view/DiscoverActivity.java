@@ -19,6 +19,11 @@ import com.example.melg.recruit.R;
 import com.example.melg.recruit.Recruit.discover.view.cardstack.CardStackTransformer;
 import com.example.melg.recruit.Recruit.discover.view.cardstack.ViewPagerAdapter;
 import com.example.melg.recruit.models.GitProjects;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.yuyakaido.android.cardstackview.CardStackView;
 import com.yuyakaido.android.cardstackview.SwipeDirection;
 
@@ -31,6 +36,10 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class DiscoverActivity extends AppCompatActivity {
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+    private DatabaseReference recruiterRef = database.getReference("user");
 
     @BindView(R.id.viewPager)
     ViewPager viewPager;
@@ -51,6 +60,14 @@ public class DiscoverActivity extends AppCompatActivity {
 
 
     private TouristSpotCardAdapter adapter;
+    private String project_des;
+    private String project_title;
+    private String project_git;
+    private String project_language;
+    private String project_keywords;
+    private String project_url;
+    private String TAG = "BULLSHIT";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +76,41 @@ public class DiscoverActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         listResults = new ArrayList<>();
 
-        listResults.add(new GitProjects("Bloxsee App", "loxsee..", "bloxsee"));
-        listResults.add(new GitProjects("Tasks App", "task..", "task"));
-        listResults.add(new GitProjects("Yelp App", "yelp..", "yelp"));
 
-        fillListResult();
+
+        recruiterRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                Log.d(TAG, "onDataChange: "+  dataSnapshot.getKey());
+
+
+//                for (int i = 0; i <=4 ; i++) {
+//                  project_des =  dataSnapshot.child("user_00" + i).child("projects").child("project_des").getValue().toString();
+//                  project_title =  dataSnapshot.child("user_00" + i).child("projects").child("project_title").getValue().toString();
+//                  project_git =  dataSnapshot.child("user_00" + i).child("projects").child("project_git").getValue().toString();
+////                  project_url =  dataSnapshot.child("user_00" + i).child("projects").child("project_").getValue().toString();
+//                  project_keywords =  dataSnapshot.child("user_00" + i).child("projects").child("project_keywords").getValue().toString();
+//                  project_language =  dataSnapshot.child("user_00" + i).child("projects").child("language").getValue().toString();
+//
+//                    Log.d(TAG, "onDataChange: " + project_des + " " + project_title + " " + project_git + " " + project_keywords + " " + project_keywords +" " + project_language);
+//                }
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d(TAG, "onCancelled: " + databaseError.getCode());
+
+            }
+        });
+
+//        listResults.add(new GitProjects("Bloxsee App", "loxsee..", "bloxsee",project_des,project_language,project_keywords));
+//        listResults.add(new GitProjects("Tasks App", "task..", "task"));
+//        listResults.add(new GitProjects("Yelp App", "yelp..", "yelp"));
+
+//        fillListResult();
 
 
         viewPagerAdapter = new ViewPagerAdapter(DiscoverActivity.this, listResults);
@@ -78,14 +125,14 @@ public class DiscoverActivity extends AppCompatActivity {
 
 
     }
-
-    private void fillListResult() {
-
-        for (int i = 0; i < 10; i++) {
-            listResults.add(new GitProjects("Project" + i, "urlGoesHere", "gif"));
-        }
-
-    }
+//
+//    private void fillListResult() {
+//
+//        for (int i = 0; i < 10; i++) {
+//            listResults.add(new GitProjects("Project" + i, "urlGoesHere", "gif"));
+//        }
+//
+//    }
 
     @OnClick({R.id.dislikeBtn, R.id.likeBtn})
     public void onViewClicked(View view) {
