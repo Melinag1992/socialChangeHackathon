@@ -8,17 +8,38 @@ public class User extends Person{
     private String resumeLocation;
     private List<String> keyWords;
     private List<GitProjects> projects;
+    private String language;
+    private boolean matched;
 
-    public User(String firstName, String lastName, String email, String gitHubUrl, String jobTitle, String resumeLocation, List<String> keyWords, List<GitProjects> projects) {
+
+
+    public User(String firstName, String lastName, String email, String gitHubUrl, String jobTitle, String resumeLocation, List<String> keyWords, List<GitProjects> projects, String language, boolean matched) {
         super(firstName, lastName, email);
         this.gitHubUrl = gitHubUrl;
         this.jobTitle = jobTitle;
         this.resumeLocation = resumeLocation;
         this.keyWords = keyWords;
         this.projects = projects;
+        this.language = language;
+        this.matched = matched;
     }
 
 
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public boolean isMatched() {
+        return matched;
+    }
+
+    public void setMatched(boolean matched) {
+        this.matched = matched;
+    }
     public String getGitHubUrl() {
         return gitHubUrl;
     }
