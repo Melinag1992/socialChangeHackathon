@@ -8,13 +8,24 @@ public class CardStackTransformer implements ViewPager.PageTransformer {
     @Override
     public void transformPage(@NonNull View page, float position) {
         if (position>=0){
+//            page.setScaleX(0.8f-0.05f*position);
+//            page.setScaleY(0.8f);
+
+//            //gives stack look
+//            page.setTranslationX(-page.getWidth()*position);
+//            //3d look- shifts every card up by 30 pixels
+//            page.setTranslationY(30*position);
+
+
             page.setScaleX(0.8f-0.05f*position);
+            //height of card
             page.setScaleY(0.8f);
 
-            //gives stack look
-            page.setTranslationX(-page.getWidth()*position);
+
+            //gives stack look/ move right to left
+            page.setTranslationX((-page.getWidth()+90)*position);
             //3d look- shifts every card up by 30 pixels
-            page.setTranslationY(30*position);
+            page.setTranslationY(position*10);
         }
     }
 }

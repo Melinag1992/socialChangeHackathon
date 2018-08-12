@@ -1,5 +1,7 @@
 package com.example.melg.recruit.Recruit.models;
 
+import com.example.melg.recruit.models.Recruiter;
+
 public class JobPosting extends Recruiter {
 
     private String date_posted;

@@ -1,4 +1,4 @@
-package com.example.melg.recruit.Recruit.models;
+package com.example.melg.recruit.models;
 
 public class Person {
     private String first_name;
