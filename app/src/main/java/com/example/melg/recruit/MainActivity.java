@@ -3,11 +3,14 @@ package com.example.melg.recruit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 import com.example.melg.recruit.Recruit.RecForm;
+import com.example.melg.recruit.Recruit.RecForm;
 import com.example.melg.recruit.Recruit.discover.view.DiscoverActivity;
+import com.example.melg.recruit.users.ProfileActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 //            //User profile
 //            view = new Intent(this, DiscoverActivity.class);
 //        }
-        view = new Intent(this, RecForm.class);
+        view = new Intent(this, ProfileActivity.class);
         startActivity(view);
         finish();
 
