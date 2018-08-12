@@ -88,11 +88,10 @@ public class DiscoverActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.dislikeBtn:
-                    swipeRight();git
+                swipeLeft();
                 break;
             case R.id.likeBtn:
-                swipeLeft();
-
+                swipeRight();
                 break;
         }
     }
