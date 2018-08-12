@@ -88,7 +88,7 @@ public class DiscoverActivity extends AppCompatActivity {
             public void onResponse(Call<Object> call, Response<Object> response) {
                 Log.d("==", "onResponse: SUCCESS");
                 Log.d("==", "onResponse: SUCCESS"+response.toString());
-                Log.d("==", "onResponse: SUCCESS"+response.body().toString());
+                //Log.d("==", "onResponse: SUCCESS"+response.body().toString());
             }
 
             @Override

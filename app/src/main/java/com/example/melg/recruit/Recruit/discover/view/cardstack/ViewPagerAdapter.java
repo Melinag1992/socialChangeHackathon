@@ -71,7 +71,7 @@ public class ViewPagerAdapter extends PagerAdapter {
         ButterKnife.bind(this, view);
 
 
-        titleTv.setText(contents.get(position).getProjectName());
+        titleTv.setText(contents.get(position).getProject_title());
         projectRecoring.setImageResource(R.drawable.ic_launcher_background);
 
 
