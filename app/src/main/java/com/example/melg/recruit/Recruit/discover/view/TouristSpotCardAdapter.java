@@ -12,6 +12,7 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+
 import com.bumptech.glide.Glide;
 import com.example.melg.recruit.R;
 import com.example.melg.recruit.models.GitProjects;
@@ -48,7 +49,7 @@ public class TouristSpotCardAdapter extends ArrayAdapter<GitProjects> {
 
         GitProjects spot = getItem(position);
 
-        holder.titleTv.setText(spot.getProjectName());
+        holder.titleTv.setText(spot.getProject_title());
 
         if (position%2==0){
 
