@@ -1,31 +1,19 @@
 package com.example.melg.recruit.Recruit.discover.view;
 
 import android.content.Context;
-import android.net.Uri;
-import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
 import com.example.melg.recruit.R;
 import com.example.melg.recruit.models.GitProjects;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import pl.droidsonroids.gif.GifDrawable;
-
-import static java.security.AccessController.getContext;
 
 public class TouristSpotCardAdapter extends ArrayAdapter<GitProjects> {
 
@@ -80,5 +68,9 @@ public class TouristSpotCardAdapter extends ArrayAdapter<GitProjects> {
             ButterKnife.bind(this, contentView);
         }
     }
+
+
+
+
 
 }

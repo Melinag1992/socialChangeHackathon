@@ -5,18 +5,15 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ProgressBar;
 
 import com.example.melg.recruit.R;
-import com.example.melg.recruit.Recruit.discover.view.cardstack.CardStackTransformer;
+import com.example.melg.recruit.Recruit.discover.ApiNode;
+import com.example.melg.recruit.Recruit.discover.ClientService;
 import com.example.melg.recruit.Recruit.discover.view.cardstack.ViewPagerAdapter;
 import com.example.melg.recruit.models.GitProjects;
 import com.yuyakaido.android.cardstackview.CardStackView;
@@ -29,6 +26,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DiscoverActivity extends AppCompatActivity {
 
@@ -79,6 +79,25 @@ public class DiscoverActivity extends AppCompatActivity {
 
     }
 
+    private void retrofit() {
+        ClientService clientService = new ClientService("https://diversityhiring.mybluemix.net");
+        ApiNode apiNode = clientService.getApi();
+        Call<Object> newsCall= apiNode.postRequest();
+        newsCall.enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, Response<Object> response) {
+                Log.d("==", "onResponse: SUCCESS");
+                Log.d("==", "onResponse: SUCCESS"+response.toString());
+                Log.d("==", "onResponse: SUCCESS"+response.body().toString());
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                Log.d("==", "onFailure: FAIL");
+            }
+        });
+    }
+
     private void fillListResult() {
 
         for (int i = 0; i < 10; i++) {
@@ -95,6 +114,7 @@ public class DiscoverActivity extends AppCompatActivity {
                 break;
             case R.id.likeBtn:
                 swipeRight();
+                retrofit();
                 break;
         }
     }
