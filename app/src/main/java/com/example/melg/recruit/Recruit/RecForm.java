@@ -13,6 +13,10 @@ public class RecForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.form_rec);
 
+        getSupportActionBar().setTitle("Developer Request");
+
+
+
 
     }
 }
