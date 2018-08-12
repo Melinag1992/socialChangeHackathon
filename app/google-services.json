@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "262520782856",
+    "firebase_url": "https://socialchangehackathon-65538.firebaseio.com",
+    "project_id": "socialchangehackathon-65538",
+    "storage_bucket": "socialchangehackathon-65538.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262520782856:android:a8cef28d03765ecf",
+        "android_client_info": {
+          "package_name": "com.example.melg.recruit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262520782856-8tfgqnii037t7h0tce176t7ona6l99qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.melg.recruit",
+            "certificate_hash": "148ae6fd63d14008e8c8c25110e53461f2512f5d"
+          }
+        },
+        {
+          "client_id": "262520782856-mpu4u2a56d9mq5g8c2c0l3mtbaddnomt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMPmYURa3mINNv61Ew4PrXBYxJ2ynMagM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262520782856-mpu4u2a56d9mq5g8c2c0l3mtbaddnomt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

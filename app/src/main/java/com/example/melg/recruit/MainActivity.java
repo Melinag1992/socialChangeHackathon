@@ -8,6 +8,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.email_edit_text_register) TextView email;
     @BindView(R.id.password_edit_text_register) TextView password;

@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.melg.recruit.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Recruit.discover.view.DiscoverActivity"></activity>
+        <activity android:name="com.example.melg.recruit.Recruit.RecForm"/>
+        <activity android:name="com.example.melg.recruit.Recruit.discover.view.DiscoverActivity"></activity>
     </application>
 
 </manifest>
