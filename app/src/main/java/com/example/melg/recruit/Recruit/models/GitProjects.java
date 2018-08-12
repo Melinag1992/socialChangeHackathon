@@ -2,19 +2,19 @@ package com.example.melg.recruit.Recruit.models;
 
 public class GitProjects {
 
-    private String projectName;
+    private String project_title;
     private String projectUrl;
     private String language;
-    private String description;
-    private String tags;
+    private String project_des;
+    private String project_keywords;
     private String project_git;
 
-    public String getProjectName() {
-        return projectName;
+    public String getProject_title() {
+        return project_title;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setProject_title(String project_title) {
+        this.project_title = project_title;
     }
 
     public String getProjectUrl() {
@@ -33,20 +33,20 @@ public class GitProjects {
         this.language = language;
     }
 
-    public String getDescription() {
-        return description;
+    public String getProject_des() {
+        return project_des;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setProject_des(String project_des) {
+        this.project_des = project_des;
     }
 
-    public String getTags() {
-        return tags;
+    public String getProject_keywords() {
+        return project_keywords;
     }
 
-    public void setTags(String tags) {
-        this.tags = tags;
+    public void setProject_keywords(String project_keywords) {
+        this.project_keywords = project_keywords;
     }
 
     public String getProject_git() {
