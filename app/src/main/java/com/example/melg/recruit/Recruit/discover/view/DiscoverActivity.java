@@ -57,7 +57,11 @@ public class DiscoverActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discover);
         ButterKnife.bind(this);
+        listResults = new ArrayList<>();
 
+        listResults.add(new GitProjects("Bloxsee App", "loxsee..", "bloxsee"));
+        listResults.add(new GitProjects("Tasks App", "task..", "task"));
+        listResults.add(new GitProjects("Yelp App", "yelp..", "yelp"));
 
         fillListResult();
 
@@ -76,10 +80,9 @@ public class DiscoverActivity extends AppCompatActivity {
     }
 
     private void fillListResult() {
-        listResults = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            listResults.add(new GitProjects("Project" + i, "urlGoesHere", "VideoNameGoesHere"));
+            listResults.add(new GitProjects("Project" + i, "urlGoesHere", "gif"));
         }
 
     }
